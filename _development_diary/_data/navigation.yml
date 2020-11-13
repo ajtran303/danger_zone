@@ -1,0 +1,4 @@
+- name: Home
+  link: /
+- name: Development Diary
+  link: /diary.html
