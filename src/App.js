@@ -1,20 +1,10 @@
-import logo from './logo-cropped.png';
-import './App.css';
+import PlayButton from './PlayButton';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="Quizzery banner logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Click to Play!
-        </a>
-      </header>
+      <h1>Quizzerly</h1>
+      <PlayButton />
     </div>
   );
 }

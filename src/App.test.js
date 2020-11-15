@@ -1,14 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-// 
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
 
-test('renders start button', () => {
+test('renders name of the game', () => {
   render(<App />);
-  const linkElement = screen.getByText('Click to Play!');
-  expect(linkElement).toBeInTheDocument();
+  const title = screen.getByText('Quizzerly');
+  expect(title).toBeInTheDocument();
+});
+
+test('has a play button', () => {
+  render(<App />);
+  const playButton = screen.getByText('Click to Play!');
+  expect(playButton).toBeInTheDocument();
 });
