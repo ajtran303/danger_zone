@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import GameBoard from './GameBoard';
 
 export default function PlayButton() {
   const [active, setActive] = useState(false)
@@ -18,6 +19,10 @@ export default function PlayButton() {
       >
         Click to Play!
       </Button>
+    }
+
+    { active === true &&
+      <GameBoard />
     }
     </div>
   )
