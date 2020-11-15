@@ -1,0 +1,9 @@
+.cell {
+  height: 50px;
+  width: 100px;
+  border: 3px dashed blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
