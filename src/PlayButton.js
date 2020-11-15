@@ -1,11 +1,24 @@
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 
-function PlayButton() {
+export default function PlayButton() {
+  const [active, setActive] = useState(false)
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    setActive(true);
+  }
+
   return (
-    <Button type="button">
-      Click to Play!
-    </Button>
+    <div>
+    { active === false &&
+      <Button
+        type="button"
+        onClick={ handleChange }
+      >
+        Click to Play!
+      </Button>
+    }
+    </div>
   )
 };
-
-export default PlayButton;
