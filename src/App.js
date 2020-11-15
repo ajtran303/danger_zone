@@ -1,15 +1,14 @@
-import { PlayButton } from './Button';
+
+import { Header } from './Header';
+import {GameBoard} from './GameBoard'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <PlayButton />
-      <PlayButton />
-      <PlayButton />
-      <PlayButton />
-      <PlayButton />
-      <PlayButton />
+      <Header />
+
+      <GameBoard/>
     </div>
   );
 }
