@@ -3,6 +3,12 @@ import App from './App';
 
 test('renders name of the game', () => {
   render(<App />);
-  const linkElement = screen.getByText('Quizzerly');
-  expect(linkElement).toBeInTheDocument();
+  const title = screen.getByText('Quizzerly');
+  expect(title).toBeInTheDocument();
+});
+
+test('has a play button', () => {
+  render(<App />);
+  const playButton = screen.getByText('Click to Play!');
+  expect(playButton).toBeInTheDocument();
 });
