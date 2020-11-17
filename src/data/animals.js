@@ -1,4 +1,4 @@
-[
+const animals = [
     {
         "category": "Animals",
         "type": "boolean",
@@ -50,3 +50,5 @@
         ]
     }
 ]
+
+export default animals

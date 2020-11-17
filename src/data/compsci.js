@@ -1,4 +1,4 @@
-[
+const compsci = [
     {
         "category": "Science: Computers",
         "type": "boolean",
@@ -50,3 +50,5 @@
         ]
     }
 ]
+
+export default compsci

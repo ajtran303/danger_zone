@@ -1,4 +1,4 @@
-[
+const vehicles = [
     {
         "category": "Vehicles",
         "type": "boolean",
@@ -50,3 +50,5 @@
         ]
     }
 ]
+
+export default vehicles

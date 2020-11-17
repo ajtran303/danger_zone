@@ -1,4 +1,4 @@
-[
+const mythology = [
     {
         "category": "Mythology",
         "type": "boolean",
@@ -50,3 +50,5 @@
         ]
     }
 ]
+
+export default mythology

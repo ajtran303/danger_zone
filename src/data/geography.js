@@ -1,4 +1,4 @@
-[
+const geography = [
     {
         "category": "Geography",
         "type": "boolean",
@@ -50,3 +50,5 @@
         ]
     }
 ]
+
+export default geography
