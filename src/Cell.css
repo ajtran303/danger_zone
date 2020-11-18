@@ -7,3 +7,12 @@
   align-items: center;
   margin-bottom: 10px;
 }
+
+.clicked-cell {
+  height: 50px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}

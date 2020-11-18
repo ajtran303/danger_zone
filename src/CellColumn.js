@@ -1,13 +1,19 @@
 import Column from 'react-bootstrap/Col';
 import Cell from './Cell'
 
-export default function CellColumn(props) {
-  const points = ['100', '200', '300', '400', '500']
-
+export default function CellColumn({ category, questions, broadcast }) {
   return (
     <Column className='cell-column'>
-      <Cell name={props.category} />
-      { points.map( (point) => <Cell name={point} /> ) }
+      <Cell name={category} />
+      { questions.map( (question, index) => {
+        return (<Cell 
+          name={(index+1)*100} 
+          question={question.question} 
+          answer={question.correct_answer} 
+          broadcast={broadcast}  
+          />)
+        })
+      } 
     </Column>
-  )
+  ) 
 };
