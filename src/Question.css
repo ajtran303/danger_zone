@@ -1,0 +1,8 @@
+.question-box{
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    background: antiquewhite;
+    z-index: 10000;
+}

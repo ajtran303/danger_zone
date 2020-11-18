@@ -8,9 +8,11 @@ import compsci from './data/compsci'
 import geography from './data/geography'
 import mythology from './data/mythology'
 import vehicles from './data/vehicles'
+import {useState} from "react";
 
 export default function GameBoard() {
   const categories = [animals, compsci, geography, mythology, vehicles]
+    const [show, setShow] = useState('show');
 
   return (
     <Container className="game-board">

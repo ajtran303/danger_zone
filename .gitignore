@@ -24,3 +24,5 @@ yarn-error.log*
 
 # this makes me sad
 debug.log
+
+.idea
