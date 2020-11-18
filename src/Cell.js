@@ -1,15 +1,23 @@
+import React, { useState } from 'react';
+import Question from './Question';
 import "./Cell.css"
 
-export default function Cell(props) {
+export default function Cell({ name, question }) {
+  const [active, setActive] = useState(false)
 
-  // onClick, this component needs to:
-  // 1. hide the current contents of the gameboard
-  // 2. pass its question prop to a new component
+  const handleChange = (event) => {
+      event.preventDefault();
+      setActive(true);
+    }
 
   return (
-    <section className="cell">
-      {props.name}
-      {/* {props.question} */}
-    </section>
+    <div>
+      { !active && 
+        <section className="cell" onClick={handleChange}>{name}</section>
+      }
+      {
+        active && < Question question={question} />
+      }
+    </div>
   )
 };
