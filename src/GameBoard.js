@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import Question from './Question';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import CellColumn from "./CellColumn";
@@ -10,13 +12,32 @@ import mythology from './data/mythology'
 import vehicles from './data/vehicles'
 
 export default function GameBoard() {
+  const [questionState, updateQuestionState] = useState(false)
+  // the cell turns it to true
+  // the modal turns it back to false
+
   const categories = [animals, compsci, geography, mythology, vehicles]
 
   return (
     <Container className="game-board">
-      <Row>
-      { categories.map( (category) => <CellColumn category={category[0]['category']}  questions={category} /> ) }
-      </Row>
+      {
+        !questionState &&
+        <Row>
+          { categories.map( (category) => {
+              return <CellColumn 
+                category={category[0]['category']}  
+                questions={category} 
+                broadcast={updateQuestionState} />
+            })
+          }
+        </Row>
+      }
+      {
+        questionState &&
+        <Question question={questionState.question} />
+      }
     </Container>
   )
 };
+
+

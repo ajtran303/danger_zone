@@ -2,14 +2,20 @@ import React, { useState } from 'react';
 import Question from './Question';
 import "./Cell.css"
 
-export default function Cell({ name, question, answer }) {
+export default function Cell({ name, question, answer, broadcast }) {
   const [active, setActive] = useState(false)
+
+  const questionState = {
+    'question': question,
+    'answer': answer,
+    'isQuestionAsked': true
+  }
 
   const handleChange = (event) => {
       event.preventDefault();
       setActive(true);
-      // tell the Gameboard question, answer
-      // can we call Gameboard.setQuestionActive()
+      broadcast(questionState);
+      // 
     }
 
   return (
